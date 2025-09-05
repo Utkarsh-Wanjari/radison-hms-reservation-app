@@ -11,15 +11,6 @@ pipeline {
                 sh 'mvn clean package -DskipTests'
             }
         }
-        stage('DOCKER-BUILD'){
-            steps{
-                sh '''
-                        docker build . -t utkarsh1313/radison-reservation-app-sk:latest
-                        docker push utkarsh1313/radison-reservation-app-sk:latest
-                        docker rmi -f utkarsh1313/radison-reservation-app-sk:latest
-                  '''
-            }
-        }
         stage('DEPLOY'){
             steps{
                 sh 'kubectl apply -f yaml/'
