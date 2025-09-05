@@ -18,6 +18,6 @@ spec:
         - name: reservation-app-container
           ports:
             - containerPort: 8080
-          image: shubhamkalsait1/radison-reservation-app:latest
+          image: utkarsh1313/radison-reservation-app-sk:latest
   strategy:
     type: RollingUpdate
