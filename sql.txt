@@ -1,6 +1,3 @@
-CREATE DATABASE flightdb;
-USE flightdb;
-
 CREATE TABLE User (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
@@ -8,12 +5,12 @@ CREATE TABLE User (
     email VARCHAR(255) NOT NULL,
     gender VARCHAR(10),
     contactNumber VARCHAR(15),
-    age INT,
+    age INT
 );
 
 CREATE TABLE User_Roles (
     user_id BIGINT NOT NULL,
-    roles VARCHAR(50),
+    role VARCHAR(50),
     PRIMARY KEY (user_id, role),
     FOREIGN KEY (user_id) REFERENCES User(id) ON DELETE CASCADE
 );
@@ -251,7 +248,7 @@ VALUES ('SG151', 'Indore', 'Dehradun', '2025-01-10', '2025-01-10 07:45:00');
 
 -------------------------------------------------------------------------
 
-Check_in DB
+-- Check_in DB
 
 CREATE TABLE check_in (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
