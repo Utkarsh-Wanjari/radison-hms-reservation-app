@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('PULL'){
             steps{
-                git branch: 'dev', url: 'https://github.com/shubhamkalsait/radison-hms-reservation-app.git'
+                git branch: 'dev', url: 'https://github.com/Utkarsh-Wanjari/radison-hms-reservation-app.git'
             }
         }
         stage('BUILD'){
