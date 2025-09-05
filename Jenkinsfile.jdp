@@ -13,9 +13,11 @@ pipeline {
         }
         stage('DOCKER-BUILD'){
             steps{
-                sh '''docker build . -t utkarsh1313/radison-reservation-app-sk:latest
+                sh '''
+                        docker build . -t utkarsh1313/radison-reservation-app-sk:latest
                         docker push utkarsh1313/radison-reservation-app-sk:latest
-                        docker rmi -f utkarsh1313/radison-reservation-app-sk:latest'''
+                        docker rmi -f utkarsh1313/radison-reservation-app-sk:latest
+                  '''
             }
         }
         stage('DEPLOY'){
